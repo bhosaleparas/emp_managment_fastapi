@@ -5,6 +5,16 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) for emp
 
 ---
 
+## 🧰 Tech Stack
+
+* FastAPI
+* SQLAlchemy
+* Pydantic
+* Uvicorn
+* Python 3.9+
+
+---
+
 ## 🚀 Features
 
 - Get all employees  
@@ -12,18 +22,6 @@ This project demonstrates CRUD operations (Create, Read, Update, Delete) for emp
 - Create a new employee  
 - Update employee details  
 - Delete an employee  
-
----
-
-## 📌 Endpoints
-
-| Method | Endpoint | Description |
-|--------|----------|-------------|
-| GET | `/employees` | Get all employees |
-| GET | `/employees/{id}` | Get employee by ID |
-| POST | `/employees` | Create a new employee |
-| PUT | `/employees/{id}` | Update employee by ID |
-| DELETE | `/employees/{id}` | Delete employee by ID |
 
 ---
 
@@ -47,15 +45,18 @@ uvicorn main:app --reload
 
 ---
 
-## 🧰 Tech Stack
+## 📌 Endpoints
 
-* FastAPI
-* SQLAlchemy
-* Pydantic
-* Uvicorn
-* Python 3.9+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/employees` | Get all employees |
+| GET | `/employees/{id}` | Get employee by ID |
+| POST | `/employees` | Create a new employee |
+| PUT | `/employees/{id}` | Update employee by ID |
+| DELETE | `/employees/{id}` | Delete employee by ID |
 
 ---
+
 
 ## 📬 Author
 
