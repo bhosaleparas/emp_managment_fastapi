@@ -66,3 +66,15 @@ def create_emp(employee:schemas.EmployeeCreate,db:Session=Depends(get_db)):
 
 
 # get emp by id
+
+@app.get('/employee/{emp_id}',response_model=schemas.EmployeeResponse)
+def get_employee(employee_id:int ,db:Session=Depends(get_db)):
+    employee=db.query(models.Employee).filter(models.Employee.id==employee_id).first()
+    
+    if not employee:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail=f"employee not found for is {employee_id}"
+        )
+    
+    return employee
